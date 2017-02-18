@@ -3,7 +3,7 @@
 yum_packages:
   - libselinux-python
 
-
+## geerlingguy.ntp
 ntp_enabled: yes
 ntp_timezone: Australia/Melbourne
 ntp_manage_config: yes
