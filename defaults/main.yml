@@ -2,9 +2,3 @@
 
 yum_packages:
   - libselinux-python
-
-
-ntp_enabled: true
-ntp_timezone: Australia/Melbourne
-ntp_manage_config: true
-ntp_area: .uk
