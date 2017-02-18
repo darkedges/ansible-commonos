@@ -11,6 +11,7 @@ galaxy_info:
       - all
   categories:
     - system
-  dependencies:
-    - { role: "geerlingguy.ntp" }
+  
+dependencies:
+  - geerlingguy.ntp
   
