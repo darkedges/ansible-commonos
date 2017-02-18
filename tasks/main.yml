@@ -1,5 +1,7 @@
 ---
 
+- debug: var=ntp_area
+
 - name: Install dependencies
   yum: "name={{ item }} state=installed"
   with_items: "{{ yum_packages }}"
