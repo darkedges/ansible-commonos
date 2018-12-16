@@ -1,15 +1,16 @@
 ---
 
 - name: Install dependencies
-  yum: "name={{ item }} state=installed"
-  with_items: "{{ yum_packages }}"
+  yum: 
+    name: "{{ item }}"
+    state: "installed"
+  loop: "{{ yum_packages }}"
 
 - name: ensure 'PasswordAuthentication yes' is present in '/etc/ssh/sshd_config'
-  lineinfile: dest=/etc/ssh/sshd_config
-              regexp='^PasswordAuthentication'
-              line='PasswordAuthentication yes'
-              state=present
+  lineinfile: 
+    path: "etc/ssh/sshd_config"
+    regexp: '^PasswordAuthentication'
+    line: 'PasswordAuthentication yes'
+    state: present
   notify: restartSSH
-
-- include: installpip.yml
-- include: installRNGD.yml
+  
